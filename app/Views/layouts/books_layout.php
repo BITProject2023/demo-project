@@ -53,8 +53,14 @@
                             <a class="account-satting-active" href="#"><i class="pe-7s-user-female"></i></a>
                             <div class="account-dropdown">
                                 <ul>
-                                    <li><a href="login-register.html">Login</a></li>
-                                    <li><a href="login-register.html">Register</a></li>
+
+                                    <?php if (session('login_status')) { ?>
+                                    <li>Welcome, <?= session('username') ?></li>
+                                    <li><a href="<?=base_url().'logout'?>">Logout</a></li>
+                                    <?php }else{ ?>
+                                    <li><a href="<?=base_url().'login'?>">Login</a></li>
+                                    <li><a href="<?=base_url().'register'?>">Register</a></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </div>
@@ -131,7 +137,7 @@
                                 
                                 <li><a href="<?=base_url()?>about-us"> About </a></li>
                                 <li><a href="<?=base_url()?>contact-us"> Contact</a></li>
-                                <li><a href="<?=base_url()?>online-registration"> Register</a></li>
+                                <li><a href="<?=base_url()?>register"> Register</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -147,7 +153,7 @@
                             </li>
                             <li><a href="<?=base_url()?>about-us">About us</a></li>
                             <li><a href="<?=base_url()?>contact-us">Contact</a></li>
-                            <li><a href="<?=base_url()?>online-registration"> Register</a></li>
+                            <li><a href="<?=base_url()?>register"> Register</a></li>
                         </ul>
                     </nav>
                 </div>

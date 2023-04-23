@@ -47,12 +47,33 @@ $routes->get('/', 'Home::index');
 $menu_items = [];
 
 $menu_items ['about-us'] = 'MenuController::about_us';
-$menu_items ['contact-us'] = 'MenuController::contact_us';
-$menu_items ['online-registration/(:num)'] = 'MenuController::register/$1';
+//$menu_items ['contact-us'] = 'MenuController::contact_us';
+// $menu_items ['online-registration/(:num)'] = 'MenuController::register/$1';
 
 $menu_items['test-db'] = 'DbTestController::index';
 
 $menu_items['test-db2'] = 'DbTestController::getTrainingData';
+
+$menu_items['test-model'] = 'TestModelController::index';
+$menu_items['studentinfo'] = 'TestModelController::getStudentInfo';
+
+$menu_items['libz'] = 'TestLibController::index';
+$menu_items['testmail'] = 'TestMailController::index';
+$menu_items['testhelp'] = 'TestHelpers::index';
+$menu_items['contact-us'] = 'ContactFormController::index';
+
+$menu_items['register'] = 'RegisterController::index';
+$menu_items['create'] = 'RegisterController::create';
+
+$menu_items['login'] = 'LoginController::index';
+$menu_items['login/auth'] = 'LoginController::authenticate';
+$menu_items['logout'] = 'LoginController::logout';
+
+
+
+
+
+
 
 
 
